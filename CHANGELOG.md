@@ -18,3 +18,9 @@
 - Add read-only same-repository PR validation for additive AI rule proposals and preserve manual merge authority.
 - Pin checkout v7.0.1 (Node.js 24); online validation pending.
 - Stable AI.list unchanged; V1.5 device validation remains separate.
+
+## V1.8 maintenance tools (candidate)
+
+- Separate actionable candidates, remembered human decisions and blocked shared roots; reopen on scope/source change, expiry or incomplete sources.
+- Add initially empty review ledger and validation for ledger-only PRs; no candidate is pre-approved or pre-rejected.
+- Stable AI.list and V1.5 configuration remain unchanged.

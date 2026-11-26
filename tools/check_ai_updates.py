@@ -6,8 +6,10 @@ import re
 import sys
 import urllib.request
 from collections import defaultdict
+from datetime import datetime, timezone
 from urllib.parse import urlparse
 from ai_rules import LIST, LABEL, SHARED, parse
+from review_memory import LEDGER, load, disposition
 
 BASE = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/'
 SOURCES = {
@@ -114,7 +116,10 @@ def fetch(url):
     return data
 
 
-def review(fetcher=fetch):
+def review(fetcher=fetch, ledger_path=LEDGER, today=None):
+    ledger_before = ledger_path.read_bytes()
+    decisions = load(ledger_before, SOURCES)
+    today = today or datetime.now(timezone.utc).date()
     before = LIST.read_bytes()
     stable = parse(before)
     found = defaultdict(set)
@@ -140,19 +145,32 @@ def review(fetcher=fetch):
     for name,error in errors:
         report.append(f'| {name} FAILED ({error}) | - | - | - |')
     uncovered = [(c,r,n) for c,r,n in rows if c != 'COVERED']
+    groups = {'action': [], 'remembered': [], 'blocked': []}
+    for risk, rule, names in uncovered:
+        state = disposition(rule, risk, names, decisions, today, bool(errors))
+        group = ('blocked' if state == 'BLOCKED' else 'remembered'
+                 if state in ('DEFERRED', 'REJECTED') else 'action')
+        groups[group].append((state, risk, rule, names))
     report += ['', f'Covered upstream conditions: {len(rows)-len(uncovered)}. Uncovered conditions: {len(uncovered)}.',
-               '', '## Candidate conditions (manual review only)', '',
-               '| Status | Condition | Source |', '|---|---|---|']
-    for status,(typ,host),names in uncovered:
-        report.append(f'| {status} | `{typ},{host}` | {", ".join(names)} |')
-    if not uncovered:
-        report.append('| - | No uncovered conditions in successful sources | - |')
+               f'Actionable: {len(groups["action"])}; remembered: {len(groups["remembered"])}; blocked: {len(groups["blocked"])}.',
+               f'Review ledger: {len(decisions)} records; SHA-256 `{hashlib.sha256(ledger_before).hexdigest()}`; UTC date {today}.']
+    for group, heading in (('action', 'Candidates needing review'), ('remembered', 'Previously reviewed (still visible)'), ('blocked', 'Blocked shared roots (never auto-approved)')):
+        report += ['', '## ' + heading, '', '| Decision state | Risk | Condition | Source | Review until |', '|---|---|---|---|---|']
+        for state, risk, rule, names in groups[group]:
+            typ, host = rule
+            until = decisions.get(rule, {}).get('review_until', '-')
+            report.append(f'| {state} | {risk} | `{typ},{host}` | {", ".join(names)} | {until} |')
+        if not groups[group]:
+            report.append('| - | - | None | - | - |')
+    report += ['', 'UNREVIEWED means no recorded decision, not necessarily new upstream. A changed source set, risk, or expired date reopens a decision. Incomplete sources disable remembered filtering. Reasons remain in the ledger.']
     if errors:
         report += ['', '**INCOMPLETE: at least one source failed. Do not treat as a successful review.**']
     report += ['', 'OpenRouter monitoring is namespace-only; new unrelated dependency domains require manual discovery.',
                'Community sources are evidence leads, not official service inventories. Review official documentation and device logs before publishing.']
     if LIST.read_bytes() != before:
         raise RuntimeError('stable list changed during review')
+    if ledger_path.read_bytes() != ledger_before:
+        raise RuntimeError('review ledger changed during review')
     return '\n'.join(report)+'\n', bool(errors)
 
 

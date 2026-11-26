@@ -17,9 +17,9 @@ jobs:
       - name: Validate stable rules and offline tests
         run: |
           python3 tools/ai_rules.py validate
-          python3 -m unittest discover -s tools -p 'test_check_ai_updates.py' -v
+          python3 -m unittest discover -s tools -p 'test_*.py' -v
       - name: Check upstream candidates
         run: python3 tools/check_ai_updates.py
       - name: Verify stable list untouched
         if: always()
-        run: git diff --exit-code -- rules/AI.list
+        run: git diff --exit-code -- rules/AI.list rules/AI.review.json

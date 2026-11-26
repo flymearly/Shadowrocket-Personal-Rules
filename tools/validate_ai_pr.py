@@ -4,7 +4,8 @@ import re
 import subprocess
 import sys
 from ai_rules import LIST, parse
-from check_ai_updates import classify
+from check_ai_updates import classify, SOURCES
+from review_memory import LEDGER, load
 
 
 def check(base, candidate):
@@ -26,8 +27,11 @@ def main(base):
     if not re.fullmatch(r'[0-9a-f]{40}', base):
         raise ValueError('expected full base commit SHA')
     names = set(git('diff', '--name-only', '-z', base, 'HEAD').decode().split('\0')) - {''}
-    if 'rules/AI.list' not in names or not names <= {'rules/AI.list', 'CHANGELOG.md'}:
-        raise ValueError('rule proposal may change AI.list and optionally CHANGELOG.md only')
+    allowed = {'rules/AI.list', 'rules/AI.review.json'}
+    if not names & allowed or not names <= allowed | {'CHANGELOG.md'}:
+        raise ValueError('proposal may change AI.list, AI.review.json and optionally CHANGELOG.md only')
+    decisions = load(LEDGER.read_bytes(), SOURCES)
+    print(f'PASS: {len(decisions)} review memory records; no automatic approval.')
     additions = check(git('show', base + ':rules/AI.list'), LIST.read_bytes())
     print(f'PASS: {len(additions)} additive conditions; existing conditions unchanged.')
     for typ, host in additions:

@@ -37,3 +37,22 @@ Local online review: `python3 tools/check_ai_updates.py`.
 ## V1.7: browser-based proposal review
 
 After a successful upstream check, open `rules/AI.list` on GitHub, edit it and append only individually reviewed conditions. Choose a new branch and create a pull request into main. The same-repository `Validate AI rule proposal` workflow checks that existing conditions are retained in order, new conditions pass the validator, and only AI.list and optionally CHANGELOG.md are changed. In the PR description record the source, reason, affected routing and test plan. Review Files changed and wait for the validation check, then manually merge only if appropriate. No workflow has repository write access. The check is advisory until a required-status-check ruleset is configured; never bypass it or merge third-party proposals without review. This additive workflow does not support removal, scope expansion of existing exact rules, or rollback; those require a separately reviewed change. A PR check is not a runtime test. After merge, verify the raw rule file and refresh Shadowrocket. Keep V1.4 available for fallback. To synchronize the local Mac clone after browser merges, use `git pull --ff-only` from a clean main branch.
+
+## V1.8: review memory
+
+`rules/AI.review.json` starts empty: no previous candidate is presumed approved or rejected. To record a human decision, edit this JSON array in a same-repository PR, using exact condition, risk and source names from the latest successful run. Example (illustrative only, not a real approved entry):
+
+```json
+[
+  {
+    "condition": "DOMAIN,example.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": ["Gemini v2fly"],
+    "review_until": "2027-02-01",
+    "reason": "Await evidence that this is required for a service I use"
+  }
+]
+```
+
+Use `rejected` or `deferred`, with a reason and an ISO UTC review date. A decision only matches the exact condition, source set and risk; it reopens on change, on/after the date, or when any source is incomplete. Previously reviewed entries remain visible in a separate table, not deleted or approved. Blocked roots always appear separately. Entries no longer observed remain in the ledger; remove or revise them explicitly. Accepted rules belong in AI.list, not the ledger. The tool does not track historical upstream snapshots or identify whether an unreviewed candidate is actually new upstream, and changes within a source that do not alter the reported condition/source set/risk do not automatically reopen a decision; use the expiry and source hashes for review. Neither workflow writes the ledger or stable list. Ledger-only PRs and additive AI PRs are validated; checks remain advisory unless branch protection is configured. Never put private logs or credentials in this public ledger.

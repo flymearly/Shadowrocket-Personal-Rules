@@ -2,7 +2,7 @@ name: Validate AI rule proposal
 on:
   pull_request:
     branches: [main]
-    paths: ['rules/AI.list']
+    paths: ['rules/AI.list', 'rules/AI.review.json']
 permissions:
   contents: read
 jobs:
