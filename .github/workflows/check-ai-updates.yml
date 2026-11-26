@@ -1,0 +1,25 @@
+name: Check AI rule updates
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ai-rule-review
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Validate stable rules and offline tests
+        run: |
+          python3 tools/ai_rules.py validate
+          python3 -m unittest discover -s tools -p 'test_check_ai_updates.py' -v
+      - name: Check upstream candidates
+        run: python3 tools/check_ai_updates.py
+      - name: Verify stable list untouched
+        if: always()
+        run: git diff --exit-code -- rules/AI.list

@@ -6,3 +6,9 @@
 - No domain additions or removals; no automatic upstream synchronization.
 - Add a small offline validator and initial additive configuration builder.
 - Runtime import and remote loading require device validation.
+
+## Maintenance V1.6 - 2026-11-26
+
+- Add a manually triggered, read-only upstream candidate review workflow and offline tests.
+- No changes to stable AI.list, V1.5 config, rule routing, or publication process.
+- Device acceptance and live GitHub Actions execution remain separate checks.

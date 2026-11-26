@@ -26,3 +26,10 @@ The builder is only for the initial migration: it requires the exact V1.4 SHA-25
 ## Boundaries
 
 The initial list is inherited, not an exhaustive service inventory. Shared authentication hosts may affect other applications. Neither the validator nor the builder is a Shadowrocket parser or runtime test. Do not commit personal config files or tokens. Do not change DNS, IP rules, keywords, other policy groups or FINAL as part of AI updates.
+
+## V1.6: manual upstream review
+
+Open Actions > Check AI rule updates > Run workflow on main. Read the run summary. The workflow has read-only repository permissions, no schedule, and never edits AI.list. It checks community OpenAI/Gemini/Claude lists, v2fly Google DeepMind and the official OpenRouter developer page (known namespace only). It ignores unsupported syntax including IP/keyword rules, distinguishes covered conditions, shared roots, expansions and other review candidates, and records source hashes. A failed source makes the run incomplete. No upstream absence implies deletion. No candidate is approved automatically. The source lists can be stale or contain other services; consult official documentation and device logs. To publish a selected entry, manually edit AI.list and CHANGELOG.md and use the existing maintenance process. Device acceptance of V1.5 remains separate.
+
+Local offline tests: `python3 -m unittest discover -s tools -p 'test_check_ai_updates.py' -v`.
+Local online review: `python3 tools/check_ai_updates.py`.
