@@ -1,1 +1,646 @@
-[]
+[
+  {
+    "condition": "DOMAIN,antigravity-pa.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google Antigravity product candidate. Official Google migration guidance confirms the product family, not the necessity of this individual routing condition. Confirm personal usage and endpoint evidence before extending AI scope."
+  },
+  {
+    "condition": "DOMAIN,antigravity.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google Antigravity product candidate. Official Google migration guidance confirms the product family, not the necessity of this individual routing condition. Confirm personal usage and endpoint evidence before extending AI scope."
+  },
+  {
+    "condition": "DOMAIN,appsgenaiserver-pa.clients.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN,appsgenaiserver-pa.clients6.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN,appsgenaiserver-pa.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN,browser-intake-datadoghq.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Community auxiliary or telemetry candidate. No demonstrated functional need for a different proxy exit. Check exact service host and actual failures before altering existing routing."
+  },
+  {
+    "condition": "DOMAIN,cdn.usefathom.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Claude community"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Community auxiliary or telemetry candidate. No demonstrated functional need for a different proxy exit. Check exact service host and actual failures before altering existing routing."
+  },
+  {
+    "condition": "DOMAIN,chat.openai.com.cdn.cloudflare.net",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community OpenAI-related resource or legacy endpoint candidate. Confirm current use and connection logs; no demonstrated need to move it from existing routing. Prefer exact host for shared infrastructure."
+  },
+  {
+    "condition": "DOMAIN,daily-cloudcode-pa.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN,notebooklm-pa.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN,notebooklm.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN,openai-api.arkoselabs.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community authentication/challenge candidate; confirm exact host in current login logs and current service guidance before changing the route. No demonstrated failure."
+  },
+  {
+    "condition": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community OpenAI-related resource or legacy endpoint candidate. Confirm current use and connection logs; no demonstrated need to move it from existing routing. Prefer exact host for shared infrastructure."
+  },
+  {
+    "condition": "DOMAIN,openaicomproductionae4b.blob.core.windows.net",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community OpenAI-related resource or legacy endpoint candidate. Confirm current use and connection logs; no demonstrated need to move it from existing routing. Prefer exact host for shared infrastructure."
+  },
+  {
+    "condition": "DOMAIN,production-openaicom-storage.azureedge.net",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community OpenAI-related resource or legacy endpoint candidate. Confirm current use and connection logs; no demonstrated need to move it from existing routing. Prefer exact host for shared infrastructure."
+  },
+  {
+    "condition": "DOMAIN,static.cloudflareinsights.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Community auxiliary or telemetry candidate. No demonstrated functional need for a different proxy exit. Check exact service host and actual failures before altering existing routing."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,ai.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Independent AI platform, not an established OpenAI dependency: https://ai.com/company-news/ai-com-launch (2026-02-06). Current four-provider scope does not justify this suffix."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,ai.studio",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "AI Studio app namespace can include published user apps; verify the actual needed host before routing the entire suffix to AI."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,aicode.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,aida.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,aisandbox-pa.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,algolia.net",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,antigravity-unleash.goog",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google Antigravity product candidate. Official Google migration guidance confirms the product family, not the necessity of this individual routing condition. Confirm personal usage and endpoint evidence before extending AI scope."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,antigravity.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google Antigravity product candidate. Official Google migration guidance confirms the product family, not the necessity of this individual routing condition. Confirm personal usage and endpoint evidence before extending AI scope."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,api.statsig.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Community auxiliary or telemetry candidate. No demonstrated functional need for a different proxy exit. Check exact service host and actual failures before altering existing routing."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,apis.google.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "General Google API frontend namespace, not demonstrated to be dedicated to Gemini. Preserve Google routing; use exact service-specific hosts only if evidence requires."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community real-time connection candidate. OpenAI official guidance documents voice UDP/TCP requirements but does not establish this supplied suffix as a required AI route. Check voice connection logs and transport before adding; do not expand shared LiveKit roots."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,client-api.arkoselabs.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community authentication/challenge candidate; confirm exact host in current login logs and current service guidance before changing the route. No demonstrated failure."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,deepmind.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini community",
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,deepmind.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini community",
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,events.statsigapi.net",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Community auxiliary or telemetry candidate. No demonstrated functional need for a different proxy exit. Check exact service host and actual failures before altering existing routing."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,featuregates.org",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Community auxiliary or telemetry candidate. No demonstrated functional need for a different proxy exit. Check exact service host and actual failures before altering existing routing."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,flow.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,flow.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,geller-pa.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,gemini.gstatic.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SCOPE_EXPANSION",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Existing exact host already routes to AI. No evidence requiring the additional subdomains; keep exact match. Reconsider if logs show a needed subdomain."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,gemma.ai",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,generativeai.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini community",
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,generativelanguage.googleapis.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SCOPE_EXPANSION",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Existing exact host already routes to AI. No evidence requiring the additional subdomains; keep exact match. Reconsider if logs show a needed subdomain."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,host.livekit.cloud",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community real-time connection candidate. OpenAI official guidance documents voice UDP/TCP requirements but does not establish this supplied suffix as a required AI route. Check voice connection logs and transport before adding; do not expand shared LiveKit roots."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,identrust.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,intercom.io",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified. OpenAI network allowlist supports reachability, not a mandatory AI proxy route: https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,intercomcdn.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified. OpenAI network allowlist supports reachability, not a mandatory AI proxy route: https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,jules.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,jules.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,labs.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,labs.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,labstailwind.pa.googleapis.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,launchdarkly.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,notebook.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,notebook.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,notebooklm.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,notebooklm.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,observeit.net",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,opal.google",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,opal.google.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,openaiapi-site.azureedge.net",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community OpenAI-related resource or legacy endpoint candidate. Confirm current use and connection logs; no demonstrated need to move it from existing routing. Prefer exact host for shared infrastructure."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,openaicom.imgix.net",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community OpenAI-related resource or legacy endpoint candidate. Confirm current use and connection logs; no demonstrated need to move it from existing routing. Prefer exact host for shared infrastructure."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SCOPE_EXPANSION",
+    "sources": [
+      "Gemini community",
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Existing exact host already routes to AI. No evidence requiring the additional subdomains; keep exact match. Reconsider if logs show a needed subdomain."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com",
+    "decision": "rejected",
+    "risk": "REVIEW_SCOPE_EXPANSION",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Existing exact host already routes to AI. No evidence requiring the additional subdomains; keep exact match. Reconsider if logs show a needed subdomain."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,segment.io",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,sentry.io",
+    "decision": "rejected",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2027-05-26",
+    "reason": "Shared service or broad namespace; do not move the entire supplied suffix to AI without evidence of a dedicated dependency. Preserve existing routing; prefer an exact necessary host if justified."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,stitch.withgoogle.com",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "Gemini v2fly"
+    ],
+    "review_until": "2027-02-26",
+    "reason": "Google AI ecosystem product or backend candidate from community data. Existing four-provider routing requirement does not establish this condition as necessary; confirm product use, exact host and device logs first."
+  },
+  {
+    "condition": "DOMAIN-SUFFIX,turn.livekit.cloud",
+    "decision": "deferred",
+    "risk": "REVIEW_SHARED_OR_NEW_SERVICE",
+    "sources": [
+      "OpenAI community"
+    ],
+    "review_until": "2026-12-26",
+    "reason": "Community real-time connection candidate. OpenAI official guidance documents voice UDP/TCP requirements but does not establish this supplied suffix as a required AI route. Check voice connection logs and transport before adding; do not expand shared LiveKit roots."
+  }
+]
