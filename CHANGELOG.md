@@ -12,3 +12,9 @@
 - Add a manually triggered, read-only upstream candidate review workflow and offline tests.
 - No changes to stable AI.list, V1.5 config, rule routing, or publication process.
 - Device acceptance and live GitHub Actions execution remain separate checks.
+
+## V1.7 maintenance tools (candidate)
+
+- Add read-only same-repository PR validation for additive AI rule proposals and preserve manual merge authority.
+- Pin checkout v7.0.1 (Node.js 24); online validation pending.
+- Stable AI.list unchanged; V1.5 device validation remains separate.

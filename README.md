@@ -33,3 +33,7 @@ Open Actions > Check AI rule updates > Run workflow on main. Read the run summar
 
 Local offline tests: `python3 -m unittest discover -s tools -p 'test_check_ai_updates.py' -v`.
 Local online review: `python3 tools/check_ai_updates.py`.
+
+## V1.7: browser-based proposal review
+
+After a successful upstream check, open `rules/AI.list` on GitHub, edit it and append only individually reviewed conditions. Choose a new branch and create a pull request into main. The same-repository `Validate AI rule proposal` workflow checks that existing conditions are retained in order, new conditions pass the validator, and only AI.list and optionally CHANGELOG.md are changed. In the PR description record the source, reason, affected routing and test plan. Review Files changed and wait for the validation check, then manually merge only if appropriate. No workflow has repository write access. The check is advisory until a required-status-check ruleset is configured; never bypass it or merge third-party proposals without review. This additive workflow does not support removal, scope expansion of existing exact rules, or rollback; those require a separately reviewed change. A PR check is not a runtime test. After merge, verify the raw rule file and refresh Shadowrocket. Keep V1.4 available for fallback. To synchronize the local Mac clone after browser merges, use `git pull --ff-only` from a clean main branch.
