@@ -44,3 +44,5 @@ DOMAIN,setup.workos.com
 DOMAIN,images.workoscdn.com
 DOMAIN,workos.imgix.net
 DOMAIN,challenges.cloudflare.com
+
+# V1.7 validation test only
