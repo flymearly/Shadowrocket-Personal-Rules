@@ -44,3 +44,95 @@ DOMAIN,setup.workos.com
 DOMAIN,images.workoscdn.com
 DOMAIN,workos.imgix.net
 DOMAIN,challenges.cloudflare.com
+
+# AI ecosystem expansion | 2026-11-26 | additive proposal
+
+# Cursor
+# Evidence: https://prod.cursor.com/docs/enterprise/network-configuration ; https://cursor.com/help/troubleshooting/sign-in-domains
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursor-cdn.com
+DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursorvm.com
+DOMAIN,anysphere-binaries.s3.us-east-1.amazonaws.com
+DOMAIN,accounts.spacexsi.com
+DOMAIN,auth.grokipedia.com
+
+# Windsurf / Devin
+# Evidence: https://docs.devin.ai/desktop/troubleshooting/windsurf-common-issues
+DOMAIN-SUFFIX,windsurf.com
+DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,codeiumdata.com
+DOMAIN-SUFFIX,devin.ai
+
+# Grok
+# Evidence: https://grok.com/ ; https://docs.x.ai/developers/quickstart ; https://cursor.com/help/troubleshooting/sign-in-domains
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grokusercontent.com
+
+# Perplexity
+# Evidence: https://www.perplexity.ai/ ; https://docs.perplexity.ai/docs/getting-started/overview
+DOMAIN-SUFFIX,perplexity.ai
+
+# Hugging Face
+# Evidence: https://huggingface.co/docs/hub/en/models-downloading
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
+
+# GitHub Copilot
+# Evidence: https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN,copilot-proxy.githubusercontent.com
+DOMAIN,origin-tracker.githubusercontent.com
+
+# Microsoft Copilot
+# Evidence: https://copilot.microsoft.com/
+DOMAIN,copilot.microsoft.com
+
+# Google AI Studio and Antigravity
+# Evidence: https://ai.studio/ ; https://antigravity.google/ ; v2fly google-deepmind (community: exact API hosts)
+DOMAIN-SUFFIX,ai.studio
+DOMAIN-SUFFIX,antigravity.google
+DOMAIN,antigravity-pa.googleapis.com
+DOMAIN,antigravity.googleapis.com
+
+# Google Jules
+# Evidence: https://jules.google/
+DOMAIN-SUFFIX,jules.google
+DOMAIN-SUFFIX,jules.google.com
+
+# Gemini Notebook
+# Evidence: https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/ ; https://notebooklm.google.com/ ; v2fly google-deepmind (community: exact API hosts)
+DOMAIN-SUFFIX,notebook.google.com
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN,notebooklm-pa.googleapis.com
+DOMAIN,notebooklm.googleapis.com
+
+# Google creative tools
+# Evidence: https://flow.google/ ; https://blog.google/innovation-and-ai/models-and-research/google-labs/opal-expansion-160/ ; https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-gemini-3/
+DOMAIN-SUFFIX,flow.google
+DOMAIN-SUFFIX,opal.google
+DOMAIN-SUFFIX,stitch.withgoogle.com
+
+# Midjourney
+# Evidence: https://www.midjourney.com/
+DOMAIN-SUFFIX,midjourney.com
+
+# Suno
+# Evidence: https://suno.com/ (official page references cdn1/2.suno.ai)
+DOMAIN-SUFFIX,suno.com
+DOMAIN-SUFFIX,suno.ai
+
+# Runway
+# Evidence: https://runwayml.com/ (redirects to runway.com; links app.runwayml.com)
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN-SUFFIX,runway.com
+
+# Poe
+# Evidence: https://poe.com/
+DOMAIN-SUFFIX,poe.com
+
+# Arena
+# Evidence: https://arena.ai/
+DOMAIN-SUFFIX,arena.ai
